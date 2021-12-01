@@ -70,4 +70,4 @@
 (defn do-rebase
   [delete-records rebase-maps db]
   (do-migrate db rebase-maps false)
-  (delete-records-by-id db delete-records))
+  (delete-records-by-id db delete-records)) ;;TODO in progress...
