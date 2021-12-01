@@ -1,0 +1,21 @@
+{:dev  {:src  "./resources/dev/migrations"
+        :dbs  [{:contact-points ["localhost:9042"]
+                :session-keyspace "dev"
+                :load-balancing-local-datacenter "datacenter1"
+                :auto-create    true}]
+        :mode :rebase}
+
+ :test {:src  "./resources/test/migrations"
+        :dbs  [{:contact-points ["localhost:9042"]
+                :session-keyspace "test"
+                :load-balancing-local-datacenter "datacenter1"
+                :auto-create    true}]
+        :mode :force}
+
+ :prod {:src  "./resources/prod/migrations"
+        :dbs  [{:contact-points ["localhost:9042"]
+                :session-keyspace "prod"
+                :load-balancing-local-datacenter "datacenter1"
+                :auto-create    true}]
+        :mode :strict}}
+

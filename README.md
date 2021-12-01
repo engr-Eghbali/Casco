@@ -4,8 +4,11 @@
 
 ## Operations
 **Up** can migrate-up your tables from versioned migration files. (from /up dir)
+
 **Down** let you revert the state(s) like droping created tables from same versioned files. (from /down dir)
+
 **Seed** you put seeds there and your dbs will grow! it's useful for filling tables. (from /seed dir)
+
 **forget** casco will just purge your migration history map, includes checksums, versions, last applied, etc.
 
 
@@ -33,32 +36,46 @@ Each profile key can contains a unique map of migration settigs we'll be discuse
 			}
 
 ##Conflict strategy modes
+
 Mode can help you face with the conflict situations like checksum colision or version-order inconsistency.
+
 **-- Strict:** If there is conflict, then it will not step further.
+
 **-- Force:** The conflicts are not considered at all.
+
 **-- Rebase:** This strategy will try to  do the "down" operation from first conflict to the end and try to build them up again.
 
 ##Miscellaneous
+
 **-- Auto-create:** The db configuration map is just like mpenet/alia cause we used it! but casco supports an extra property which will try to create the keyspace you provide if not exist.
+
 ##Command Examples
 
 >lein casco up
+
 >lein casco up --force
+
 >lein casco up :test --strict
+
 >lein casco up :test --strict  "./my-confs/casco.edn"
 
 >**lein casco <operation> <:profile-key> <--mode>  < config/file/path>**
 
 >lein casco down
+
 >lein casco down --force
+
 >lein casco down :dev --force
+
 >lein casco down :dev --force "./my-confs/casco.edn"
 
 ---------------------------------------------------------
 
 >lein casco seed :dev
+
 >lein casco seed :dev "./my-confs/casco.edn"
 
 ----------------------------------------------------------
 >lein casco forget :dev
+
 >lein casco forget :dev "./my-confs/casco.edn"
