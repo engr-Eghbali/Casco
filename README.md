@@ -35,7 +35,7 @@ Each profile key can contains a unique map of migration settigs we'll be discuse
             :mode :force}
 			}
 
-##Conflict strategy modes
+## Conflict strategy modes
 
 Mode can help you face with the conflict situations like checksum colision or version-order inconsistency.
 
@@ -45,11 +45,11 @@ Mode can help you face with the conflict situations like checksum colision or ve
 
 **-- Rebase:** This strategy will try to  do the "down" operation from first conflict to the end and try to build them up again.
 
-##Miscellaneous
+## Miscellaneous
 
 **-- Auto-create:** The db configuration map is just like mpenet/alia cause we used it! but casco supports an extra property which will try to create the keyspace you provide if not exist.
 
-##Command Examples
+## Command Examples
 
 >lein casco up
 
