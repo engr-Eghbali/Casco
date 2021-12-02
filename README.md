@@ -89,6 +89,7 @@ The mode can help you face the conflict situations like checksum collision or ve
 - :recycle: TODO : rebase conflict strategy in progress...
 - :white_medium_square: TODO : test and debug.
 - :white_medium_square: TODO : make a leiningen plugin out of it.
+- :white_medium_square: TODO : publish a proper readme/documentation/manual/wiki/codox
 - :white_medium_square: TODO : do the licensings stuff!	
 - :white_medium_square: TODO : smoke test and improvements.
 - :white_medium_square: TODO : make it ready to publish.
