@@ -7,7 +7,7 @@
 
 
 
-## Operations
+## :gear: Operations
 **Up** can migrate up your tables from versioned migration files. (from /up dir)
 
 **Down** let you revert the state(s) like dropping created tables from the same versioned files. (from /down dir)
@@ -17,13 +17,13 @@
 **forget** casco will just purge your migration history map, including checksums, versions, last applied, etc.
 
 
-## Directories
+## :open_file_folder: Directories
 
 Casco needs a migration source directory containing at least one of /up, /down, /seed, or even all of them.
 The default source location is ./resources/migrationss but it's also configurable in the Casco config file we'll see further.
 The default directory of casco is root (./casco.edn) but this is configurable too.
 
-## Profiles
+## :tophat: Profiles
 This concept lets you do the separation on your operations both logically and technically. The first level keys in the Casco config file indicate to a profile you name it like dev, test, trans, etc.
 Each profile key can contain a unique map of migration settings we'll be discussed further.
 
@@ -40,7 +40,7 @@ Each profile key can contain a unique map of migration settings we'll be discuss
             :mode :force}
 			}
 
-## Conflict strategy modes
+## :crossed_swords: Conflict strategy modes
 
 The mode can help you face the conflict situations like checksum collision or version-order inconsistency.
 
@@ -50,11 +50,11 @@ The mode can help you face the conflict situations like checksum collision or ve
 
 **-- Rebase:** This strategy will try to do the "down" operation from the first conflict to the end and try to build them up again.
 
-## Miscellaneous
+## :satellite: Miscellaneous
 
 **-- Auto-create:** The DB configuration map is just like mpenet/alia cause we used it! but casco supports an extra property that will try to create the keyspace you provide if not exist.
 
-## Command Examples
+## :play_or_pause_button: Command Examples
 
 >lein casco up
 
@@ -84,7 +84,8 @@ The mode can help you face the conflict situations like checksum collision or ve
 >lein casco forget :dev
 
 >lein casco forget :dev "./my-confs/casco.edn"
-
-- TODO : rebase conflict strategy in progress...
-- TODO : test and debug.
-- TODO : make a leiningen plugin out of it.
+	
+- :ballot_box_with_check: def alies just for integrate testing.
+- :recycle: TODO : rebase conflict strategy in progress...
+- :white_medium_square: TODO : test and debug.
+- :white_medium_square: TODO : make a leiningen plugin out of it.
