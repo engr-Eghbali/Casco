@@ -3,7 +3,7 @@
 **Is just a simple, dev-env friendly tool to help you interact with states of your Cassandra DBs.**
 
 
-![alt text](https://github.com/engr-Eghbali/Casco/tree/main/resources/casco-demo.gif "Casco Demo")
+![Alt Text](https://github.com/engr-Eghbali/Casco/tree/main/resources/casco-demo.gif "Casco Demo")
 
 
 
@@ -84,3 +84,7 @@ The mode can help you face the conflict situations like checksum collision or ve
 >lein casco forget :dev
 
 >lein casco forget :dev "./my-confs/casco.edn"
+
+- TODO : rebase conflict strategy in progress...
+- TODO : test and debug.
+- TODO : make a leiningen plugin out of it.
