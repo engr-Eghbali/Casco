@@ -1,4 +1,4 @@
-# Casco
+# :bird: Casco
 
 **Is just a simple, dev-env friendly tool to help you interact with states of your Cassandra DBs.**
 
