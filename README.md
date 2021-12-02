@@ -3,7 +3,7 @@
 **Is just a simple, dev-env friendly tool to help you interact with states of your Cassandra DBs.**
 
 
-![Alt Text](https://github.com/engr-Eghbali/Casco/tree/main/resources/casco-demo.gif "Casco Demo")
+![Alt Text](https://github.com/engr-Eghbali/Casco/blob/main/resources/casco-demo.gif "Casco Demo")
 
 
 
