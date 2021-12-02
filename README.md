@@ -1,6 +1,7 @@
 # Casco
 
 **Is just a simple, dev-env friendly tool to help you interact with states of your Cassandra DBs.**
+![alt text](https://github.com/engr-Eghbali/Casco/tree/main/resources/casco-demo.gif "Casco Demo")
 
 ## Operations
 **Up** can migrate up your tables from versioned migration files. (from /up dir)
