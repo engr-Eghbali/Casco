@@ -1,26 +1,26 @@
 # Casco
 
-**Is just a simple, dev-env friendly tool to help you intract with states of your cassandra dbs.**
+**Is just a simple, dev-env friendly tool to help you interact with states of your Cassandra DBs.**
 
 ## Operations
-**Up** can migrate-up your tables from versioned migration files. (from /up dir)
+**Up** can migrate up your tables from versioned migration files. (from /up dir)
 
-**Down** let you revert the state(s) like droping created tables from same versioned files. (from /down dir)
+**Down** let you revert the state(s) like dropping created tables from the same versioned files. (from /down dir)
 
-**Seed** you put seeds there and your dbs will grow! it's useful for filling tables. (from /seed dir)
+**Seed** you put seeds there and your DBs will grow! it's useful for filling tables. (from /seed dir)
 
-**forget** casco will just purge your migration history map, includes checksums, versions, last applied, etc.
+**forget** casco will just purge your migration history map, including checksums, versions, last applied, etc.
 
 
 ## Directories
 
-Casco need a migration source directory containing at least one of /up , /down , /seed , or even all of them.
-The default source location is ./resources/migrationss but its also configurable in casco config file we'll see further.
+Casco needs a migration source directory containing at least one of /up, /down, /seed, or even all of them.
+The default source location is ./resources/migrationss but it's also configurable in the Casco config file we'll see further.
 The default directory of casco is root (./casco.edn) but this is configurable too.
 
 ## Profiles
-This concept let you do the separation on your opertations both logically and technically. The first level keys in casco config file indicates to a profile you name it like dev, test , trans, etc.
-Each profile key can contains a unique map of migration settigs we'll be discused further.
+This concept lets you do the separation on your operations both logically and technically. The first level keys in the Casco config file indicate to a profile you name it like dev, test, trans, etc.
+Each profile key can contain a unique map of migration settings we'll be discussed further.
 
     {:dev  {:src  "./resources/dev/migrations"
             :dbs  [{:contact-points ["localhost:9042"]
@@ -37,17 +37,17 @@ Each profile key can contains a unique map of migration settigs we'll be discuse
 
 ## Conflict strategy modes
 
-Mode can help you face with the conflict situations like checksum colision or version-order inconsistency.
+The mode can help you face the conflict situations like checksum collision or version-order inconsistency.
 
 **-- Strict:** If there is conflict, then it will not step further.
 
 **-- Force:** The conflicts are not considered at all.
 
-**-- Rebase:** This strategy will try to  do the "down" operation from first conflict to the end and try to build them up again.
+**-- Rebase:** This strategy will try to do the "down" operation from the first conflict to the end and try to build them up again.
 
 ## Miscellaneous
 
-**-- Auto-create:** The db configuration map is just like mpenet/alia cause we used it! but casco supports an extra property which will try to create the keyspace you provide if not exist.
+**-- Auto-create:** The DB configuration map is just like mpenet/alia cause we used it! but casco supports an extra property that will try to create the keyspace you provide if not exist.
 
 ## Command Examples
 
